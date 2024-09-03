@@ -1,0 +1,71 @@
+/* *{
+    background-color: wheat;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    color: #964B00;
+    align-items: center;
+    line-height: 30px;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+h3{
+    text-align: center;
+    color: black;
+}
+
+a{
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+}
+button{
+    background-color: #fff;
+    color: blueviolet;
+}
+
+textarea{
+    color: #000;
+} */
+
+*{
+    background-color: wheat;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p{
+    color: brown;
+    align-items: center;
+    line-height: 30px;
+}
+
+h1{
+   text-align: center;
+   color: red;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h3{
+    text-align: center;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 255, 0);
+}
+button{
+    background-color: #fff;
+    color: blueviolet;
+}
+
+textarea{
+    color: #000;
+}
+
+span{
+    text-decoration: underline;
+}
+My name is <span>Ozymandias</span>, King of Kings;<br /> 

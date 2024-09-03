@@ -1,0 +1,138 @@
+Latest Version of Css3
+
+How to Include style
+
+1. inline Styles
+    Writing style directly inline on each inline statement
+    ex=>
+        <h1 style="color:red">Bharat</h1>
+
+
+ 2.  Using <style> tag
+        style is added using the <style> element in the same document
+        
+    ex=> 
+        <style> 
+                h1{
+                    color : red;
+                }
+        </style>
+
+ 3. External Stylesheet
+                writing css in a separate document & linking it with Html File
+
+                ex=> 
+                    <head> 
+                        <link rel="stylesheet" href="File_name.css">
+                    </head>
+
+  4. Color Property
+            1.used to set the color of forground element text and text decorations
+            color:colour_name;
+
+            2.background-color
+                background-color:black;
+                
+  5.Color Systems => Named Colors
+                    each browser recognizes around 140 named colors
+                    ex => red blue green pink orange gold etc    
+                    
+        
+RGB Values is mostly used in TV 
+         color = rgb(0,0,0); max limit is 0 - 255
+
+        
+   6.Color Systems -> Hexadecimal or hex  
+                                    color = #FFFFFF
+                                              r g b
+    Letters => 0 1 2 3 4 5 6 7 8 9 A B C D E F  
+
+    
+===========================================================================
+
+Text Properties
+===============
+
+text-align (direction L R center)
+font-weight (bold lighter)
+text-decoration (underline , cut )
+line-height (gap)
+letter-spacing (between space letter)
+font-size ()
+
+
+
+
+
+1. text-align 
+            a.left/ :start
+            b.right/ :end
+            c.center
+            d.justify (left and right size align :horizontal equal)
+            
+2. font-weight: (light , bold) range 100 - 900
+                a. normal //400
+                b. bold //700
+                c.100
+                d. bolder  } used parent to more bold
+                e. lighter } used to light less to parent
+
+3. text-decoration 
+                a.underline  -> mostly used
+                b.linethrough -> mostly used
+                c.overline
+                d.none (remove underline in anchor tag then we are use of the none properties remove any other type of decoration)
+                
+                want color change of the color 
+                    ex=> 
+                      text-decoration: red underline;
+
+             decorated line 
+                1.text-decoration: wavy pink overline
+                2.text-decoration: double dotted line-through         
+
+
+ 4. Line-height
+                Control the height of the line of text
+
+                a.line-height: normal
+                b.line-height: 2.5
+
+
+5. Letter-spacing 
+                controls the horizontal spacing behavior between text character
+
+                ex=>  
+                before = >abc  normal
+                after  = >a  b  c
+
+                    a. letter-spacing :normal
+                    b. letter-spacing :10px -> pixels
+
+
+6. Font-size units in css
+        Absolute               Relative
+
+        px                        %            // mostly used  1 inch = 96px
+        pt                        em           
+        pc                        rem
+        cm                        ch
+        mm                        vh                 
+        in                        vw+many more
+
+    Pixels (px) 
+                =>  most commonly used absolute unit
+                    96px = i inch
+                    not suitable for respomsive wwebsites  // used for responsive => relatives units 
+
+                ex = >
+                    font-size: 50px;
+
+
+7.  Font-family 
+                => specifies a proritized list od one or more font family names
+                
+                syntx => 
+                            font-family: arial;
+                            font-family: avant garde, didot , sans-serif;
+                            

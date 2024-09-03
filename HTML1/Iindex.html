@@ -1,0 +1,330 @@
+// what is the internet
+// interrconnected network of computers around the world 
+// request and response cycle 
+// HTML = HYPERTEXT MARKUP LANGUAGE --> STRUCTURE & FORMATING
+
+/*
+ Html Elements
+  Standard Elements that browser recognize
+  1.paragraph
+  2.heading
+  3.image
+  the component used to design the STRUCTURE on website are called HTML tags.
+*/
+.html--> called is a extension 
+<p>  Content </p> (after paragraph are start with new line )
+^       ^ -> closing tag
+|-> opening tag
+
+nesting => nested tags
+
+heading tags 
+there are 6 types 
+h1,h2,h3....h6  
+
+
+
+Html Boilar plate
+<-------------------->
+this is the Standard format or skeleton of writing HTML Code
+
+<!DOCTYPE html>  --> means current version of html version 5
+ <html lang="en"> -->lang en means which LANGUAGE we are want to show on the web page  (  root tag of the Html )
+<head>  --> store head in a meta information link css and js then we write in a head tag linking and extra information  and dont show on the website 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   -->Webpage of the title when we are serach on google then google are search based on the tital tag then need to naming before clearly think about of the relavnt information name
+</head>
+<body>
+    
+</body>
+</html>
+
+indentation --> means a proper spacing we can easily to understand the code
+
+<----------------->
+List in Html
+1.Unorderd list 
+ sytx =>
+      <ul>
+        <li> Content </li>    print with radius button this is called of the unordered list items
+        <li> Content </li>    not exact sequence that is called of the unordered list item tag
+        <li> Content </li>
+      </ul>
+2 Ordered List 
+  sytx => 
+
+     <ol type="A">  type="A"/'A' both are same same  ->  is a attributes
+        <li>Content</li>  // print in the sequence order 
+        <li>Content</li>
+        <li>Content</li>
+        <li>Content</li>
+     </ol>
+
+
+
+
+     <-------------------->
+     Anchor tag(used to add links to your page)
+    
+        sytx =>
+            <a href="https://wwww.google.com"> google</a>
+
+                href => HYPERTEXT reference / in href we can add 2 links 
+                1.absolute link (as a same present on the google )
+                2.relative link ( Acces local in file link in the system)
+                https => is a protocol
+
+
+        <-------------------------------------------->
+        Image Elements (single tag)
+        ----------------
+         used to add image to your page 
+          sytx =>
+
+                <img src="image.png" alt="Loading..">
+
+                src = source attributes what is link 
+                alternative name -> when connetion and newtwork issue then img are not show then we show the what is img 
+
+
+    <------------------------->
+    Bold , Italic & Underline tags ->Used to higlight text in your page 
+
+    <b>bold</b>
+    <i>italic</i>
+    <u>Underline</u>
+
+
+
+    <----------------------------->
+    Comments in html
+    <!-- Comment -->
+
+
+
+
+
+    ========================================================================================
+
+    Inline V/s Block
+
+    1. Block Elements                                                     2.Inline Elements
+        takes up the full-width avilable(whole block )                          Takes up only necessary width
+        start from new line                                                      Don't start from new line
+      ex =>                                                                   ex => 
+            1.Heading Elements                                                      1.Anchor tag
+            2.paragraph Elements                                                    2.image tag
+            3.Body tag                                                              3.Span Element
+            4.Div is block of Elements
+
+  <---------------------------------------------------->
+  Div Elements(Content Division Elements)
+
+  Div is a container used to hold other Html Elements to group Elements together 
+  it is a block Element
+     sytx=>
+            <div>
+              <a href="www.google.com">Google</a>
+              <a href="www.Yotube.com">Yotube</a>
+            </div>
+            <a href="www.amazon.com">amazon</a>
+<--------------------------------------------->
+span =>
+        Span is also a generic container used to hold other Html elements or group elements together
+        it is an inline Element
+  sytx=>
+            <span>
+              <a href="www.ram.com">Ram</a>
+            </span>
+
+
+
+<==================================================>
+Hr tag
+horizontal rule Element
+sytx=>
+            <hr/> 
+
+             
+<-------------------------------------------->
+Sub & Sup Tag (subcripts , supercript)
+=============
+              sytx=>
+                  sub 
+                    H<sub>2</sub>O => H2O
+                  sup 
+                    a <sup>2</sup> + b <sup>2</sup> = 2  --> a^2+b^2=2
+
+<---------------------------------------------->
+Semantic MARKUP
+                => it is the markup that relates to the meaning of content 
+      there are two types of the Semantic 
+     ` 1.Semantic     2. Non Semantic
+      ex => <h1></h1>     ex=>  <div></div>
+      <p></p>        ```  <span></span>
+      <img src="" alt="">
+
+      Advantage =>
+                  1.meaningful / layout -> STRUCTURE
+                  2.seo friendly (search engine optimization)
+                  3.readable + screen reader 
+                  4.imoprove user experience 
+
+
+ Semantic tag
+            1. <header></header>  group of introductory or navigational aid
+              2. <main></main>   main important information & main content
+              3. <footer></footer>  contect information
+              4. <nav> </nav>  relative links information add the another page then we are used of the nav tag
+              5. <article></article>
+              6. <section></section>  related content attech 
+              7. <aside></aside> indirectaliy related links/content link with other 
+              
+        
+      Html Entites=>
+                * An Html entity is a piece of text ("string ") that begins with amparsand(&) and ends with a semicolon(;).
+                * used to display Reserved character (which would otherwise be interprested as html code ), and invisible character (like non-breaking spaces)
+                * can also use in place of character that are difficult to type with a standard keyword.
+                * browser interpres them & renders correct character
+            entity
+                a&lt;b (<)
+              a&gt;b (>)
+              &amp; (&)
+              &quot;
+              &nbsp; (non braking space space)
+
+       <------------------------------->
+       
+       Emmet Abberivation(short form) boilare plate code
+        
+       Understaning Html 5 =>
+                                The term Html5 is essentialy a buzzword that refers to a set of modern web 
+                                technologis. Thos includes the Html Living Standard, along with JavaScript A
+                                PIs to enhance storage, multimedia , ans hardware access
+How HTMLWorks 
+            Html Standard ->living Standard
+            => Html Standard is a document that tells to the browser how html should work 
+
+           ** video tag is also semantis tag
+
+
+
+ =======================================================================
+ 
+ Tables in Html =>
+                    Tables are used to represent real life table data
+                <tr>Used to display table row</tr>
+                <td>used to display table data</td>
+                <th>used to display table header</th>  // by default bold of heading of the table
+                 
+
+               sytx=>
+                      <table>
+                        <caption>Table Caption</caption>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </table>     
+
+
+
+   ===================================================
+   Colspan & Rowspan attributes
+                                => used to create cells which spans over multiple rows or columns
+                                rowspan = " "         // by default 1 value           
+                                Colspan = " "
+
+
+=========================================================================
+Form =>
+
+1.Action attributes=>
+                      Action attributes is used to define what action needs to be performed when a form are submitted
+                      or where the form data should be sent
+
+
+                  sytx =>
+                  <form action="/action.php"> </form>
+                  <form action="/action"> </form>
+2.Form Element=>
+                input 
+                * used to create multiple form control
+                * there are multiple types of inputs that can be create using type attributes
+                  ex=>
+                      <input type="text"> // as a simple input we are anything given input in the input box as a same of type text
+
+    type of attributes=>
+                       type text 
+                       type  password
+                       type   email
+                       type  time 
+                       type   Color
+                       type  number
+                       type   button
+                       type   checkbox
+                       type   range
+                       type   submit
+
+  3.Form Element
+                      placeholder attributes
+
+                      exp => 
+                              <input type="text " placeholder=":Make interative">
+                  
+            ** label 
+                      label elements represent a caption for an item in a user interface
+             
+            syntx => 
+                      <label >
+                        Enter your UserName:
+                        <input type="text" placeholder="Enter Name">
+                      </label>
+
+      >> classical approch of create label 
+
+                      syntx=>
+                              <label for="username">Enter UserName</label>
+                              <input type="text" id="username" placeholder="Username">
+                
+  =========================================================================================
+
+  Button => 
+                elements =>
+                            <button>submit</button> // by default submit type perform
+                      
+
+
+       Button Element =>
+                        type attributes 
+                        <button type="submit">submit</button>  //submit all the information on the database
+                        <button type ="button">do something  // this is normal button do nothing
+                        <button type ="reset">do something</button> // in input box any types of value already exist when u click reset button then all are information delete
+
+     
+
+       Note => we are be create button throw input elements
+       input elements =>
+                            button using input 
+
+                            <input type="submit">
+                            <input type="submit" value="Click me">
+                          
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+input Element+
+  
+checkbox -->  choose only types
+              <input type="checkbox" name = "age" id="age" checked/>
+              <label for="age">I am 18+</label>
+ RadioButton --> only choose in multiple options
+                  <input type="radio" name ="Fruit" id="apple" value="apple" >
+                  <label for="apple">Apple</label>
