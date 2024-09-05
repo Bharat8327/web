@@ -136,3 +136,149 @@ font-size ()
                             font-family: arial;
                             font-family: avant garde, didot , sans-serif;
                             
+===========================================================================================
+selectors =>
+               set of group of elements / individual element selectors choose and applies of the css 
+               
+               sytx=>
+                    selector {
+                        property: value;
+                    }
+
+                types of selectors 
+                
+                1.Universal Selector 
+                                    => To select everything in a docment
+
+                                    sytx=>
+                                            *{
+                                                property : value;
+                                            }
+
+                 2.Element Selector =>
+                                        select all elements                            
+
+
+
+                3.ID Selector => Selects an element based on the value of the element's id attributes 
+                                            
+                                    ex => 
+                                            #idselector {
+                                                property : value;
+                                            }
+
+                                    A.        #id_name{
+                                                color:red;
+                                            }
+
+                                            /* both are same a & b  */
+                                    B.         div[id="id_name"] {
+                                                color: pink;
+                                            }
+
+
+                 4.Class Selector =>    
+                                       Selects an element based on their class attributes
+                                       
+                                       sytx =>
+                                                .class_name{
+                                                    property: value;
+                                                }
+
+                5.Descendant Selector =>
+                                             Eg - Selects all paragraphs inside divs  ( grandparents -> parents -> children)
+                                             
+                                                 sytx =>
+
+                                                 div outer elment name  anf then inner element name 
+                                                        div p{
+                                                            property: value;
+                                                        } 
+
+----------------------------------------------------------------------------------------------------
+
+                    6.Adjacent Sibling Cominator =>
+                                eg - Heading3 that comesimmediately after any paragraph
+
+                                sytx =>     
+                                        p + h3{
+                                            property: value;
+                                        }
+
+
+                    7.Child Combinator 
+                                        selects all buttons which are direct children of spans ( > child combinator )
+
+                                        sytx =>     
+                                                span > button {
+                                                    property : value;
+                                                }
+
+                    8.Attribute Selector 
+                                        =>  Selects elements based on the presence or value of a given attributes
+
+                                        sytx =>
+                                                input[att="value"]{
+                                                    property: value;
+                                                }
+
+
+-----------------------------------------------------------------------------------------------
+
+
+color base on the priority =>
+                                1.id 
+                                2.class
+                                3.element                
+                find priority based on the specifity 
+                                        1st count id 
+                                        2nd count class
+                                        3rd count elemnt 
+                                    check which one is the highest in one 
+                                if two specifity are same then use cascading 
+                                who is after come he is win means colors are set
+
+
+=====================================================================================================================
+
+Pseudo Class => 
+                A keyword added to a selector that specifies a special state of the selected elements(s)
+
+                :hover
+                :active
+                :checked
+                :nth-of-type -> changes after nth times that is called of the nth-of-type
+
+
+   Pseudo Elements =>
+                        A keyword added to a selector that lets you style a specific part of the selected elements(s)
+
+                        :: first-letter
+                        :: first-line
+                        ::selection
+
+
+==========================================================================================================================
+
+CSS : Cascading StyleSheets
+        what is cascade in CSS ?                                        
+        The CSS Cascade algorithm's job is to select CSS declaration in order to determine the correct values for CSS properties
+  
+        h2{
+            background-color: yellow;
+        }
+
+        h2{
+            background-color: blue;    final color is blue
+        }
+
+
+    Selector Specificity =>
+            what is specificity?
+                ans=> specificity is an algorithm that calculates the weight that is applied to a given css declaration
+                
+                
+                --          --                    --
+                id        class attributes &       elements & 
+                              pseudo-class           pseuddo-elemnent
+

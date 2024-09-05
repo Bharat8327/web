@@ -1,0 +1,9 @@
+/* #myId p{
+    color: rgb(0,250,0);
+} */
+
+/* or */
+
+div[id="myId"] p{
+    color:#0f0;
+}
