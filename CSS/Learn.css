@@ -282,3 +282,49 @@ CSS : Cascading StyleSheets
                 id        class attributes &       elements & 
                               pseudo-class           pseuddo-elemnent
 
+//////// 
+            Inline Specificity =>
+                                Inline styles are more specific than id 
+
+                                priority of inline 
+                                1.inline style 
+                                2.id
+                                3.class & attributes & pseudo-class 
+                                4.element & pseudo - element
+
+==========================================================================================
+!important sorting 
+        To show the most specfic thing in document 
+
+        h2{
+            background-color: #fff;  !important;
+        }
+
+=============================================================================================
+
+inheritance in CSS
+                    => div{ p
+                        p{  c p
+                            ul{ c p
+                                li*4  c 
+                            }
+                        }
+                    }
+
+                    input{
+                        background-color: inherit;
+                    }
+                    button{
+                        background-color: inherit;
+                    }
+
+
+          Note => 
+                    some properties are not inherite like a ex => width , height , border etc.  manullay set of these properties    
+                
+ ====================================================================================
+ 
+ color combination for best wesite follow this website can suite make interactive
+ 1.https://mycolor.space/?hex=%23453563&sub=1
+ 2.https://coolors.co/f2dfd7-fef9ff-d4c1ec-9f9fed-736ced
+ 3.https://www.canva.com/colors/color-palette-generator/
