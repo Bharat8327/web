@@ -1,0 +1,13 @@
+div{
+    height: 200px;
+    width: 400px;
+    border: 5px;
+    background-color: cadetblue;
+    /* border-color: #ffc0cb;
+    border-style:groove; */
+    border: 5px groove #ffc0cb;
+}
+h1{
+    /* border-style: do0 */
+    border: 2px dotted firebrick;
+}

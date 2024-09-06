@@ -1,0 +1,47 @@
+* {
+   text-align: center;
+}
+
+
+#mainTopic{
+    color:#00f;
+}
+
+h1,h3,h5{
+    font-family: Georgia;
+}
+
+#pr{
+    color: white;
+    background-color: cornflowerblue;
+}
+
+div > button{
+    color: azure;
+    background-color: purple;
+}
+
+div > button:hover{
+
+color: #00f;
+background-color: yellow;
+}
+
+#pr:nth-of-type(2n-1){
+    color: yellow;
+}
+h1::first-letter{
+    color: #f00;
+}
+#yes:checked +label{
+    color: #0f0;
+}
+
+
+/*
+correct specificty 
+ h1 - 001
+#mainContent - 100
+ .main - 010
+  div .main - 010
+*/

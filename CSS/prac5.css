@@ -89,6 +89,15 @@ h1::first-letter{
 p::first-line{
     color: palevioletred;
 }
-p::selection{
-    color: #0F0;
-} 
+
+#yes :checked + label{
+    color: green;
+}
+
+
+/*
+ h1 - 001
+#mainContent - 100
+ .main - 010
+  div .main - 010
+*/
