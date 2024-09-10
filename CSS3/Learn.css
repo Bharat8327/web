@@ -1,0 +1,66 @@
+Alpha Channel => Sets the opacity for a color 
+============= 
+
+Ranges -> 0 To 1 
+        0 menans => No Visible 
+        1 means  =>  Visible
+
+     sytx =>
+                background-color: rgba(250,0,0,0.4);
+                background-color: #ff0000ff; last 2 ff is show of alpha value 
+
+
+
+=============================================================================
+Opacity -> Sets the opacity for the element
+=========
+Ranges from 0 to 1
+            ^
+          hidden   
+
+          sytx=>
+                        opacity: 1;
+=======================================================================
+CSS Transitions => Transitions enable you to define the transition between two states of an element
+----------------
+
+             syntx=> 
+            transition:1s; // ms, s
+             
+    *Transition ShortHand => Property name | duration | timing-function | delay
+                transition :  margin-top   |  2s      | ease-in-out     | 0.2s;       
+
+                margin: 0 auto; // middle of the 50%
+
+
+ =============================================================================================
+ CSS Transform =>   This property lets you rotate , Scale , Skew , or translate ans element 
+         1.Rotate :
+                    transform: rotate(45deg);
+         2.Scale : 
+                    transform : scale(0.5);
+                    transform : scale(1.5);           
+        3.Translate: 
+                     transform : translate(50px , 50px);
+                     transform : translatex(10px);
+                     transform : translatey(10px);
+        4.Skew Property 
+                        transform: skew(30deg);             
+
+------------------------------------------------------------------------------
+Box Shadow 
+           => it addes shadow effects around an element's frame
+                
+           sytx => 
+                        box-shadow:2px 2px    10px       green;
+                                    x   y   boundaries   ccolor 
+
+ 
+                             
+                                    
+BackGround image => 
+                Lets you set an image as a background
+        sytx =>
+                background-image:url("lin");
+                background-size: contain | cover | auto
+                                  repeat   crop    stretch 

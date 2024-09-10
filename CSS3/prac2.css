@@ -1,0 +1,9 @@
+
+div{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #9aaa96;
+    box-shadow: 10px 33px 8px red;
+    margin: 10px auto;
+}

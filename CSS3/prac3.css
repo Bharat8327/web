@@ -1,0 +1,9 @@
+div{
+    background-color: #453fd4;
+    padding: 10px;
+    margin: 0 auto;
+    height: 300px;
+    width: 600px;
+    background-image: url("flower.avif");
+    background-size: auto;
+}
