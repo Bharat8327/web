@@ -1,0 +1,66 @@
+h1{
+    color: rgb(50, 227, 186);
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 100px;
+    text-align: center;
+    padding-bottom: 30px;
+    text-decoration: dotted underline gold;
+}
+body{
+    background-color: rgb(29, 56, 164);
+   
+
+}
+#eye1{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border: 2px solid black;
+    display: inline-block;
+    border-radius: 22px;
+    margin: 100px;
+}
+
+#face{
+    height: 500px;
+    width: 500px;
+    border-radius: 2px solid black;
+    background-color: #ffa511;
+    margin: 0 auto;
+    border-radius: 250px;
+}
+#mouth{
+    height: 60px;
+    width: 160px;
+    /* padding-top: 110px; */
+    background-color: red;
+    position: relative;
+    left: 165px;
+    top: 50px;
+    border-radius: 0 0 50px 50px;
+}
+#o{
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    position: relative;
+    top: 20px;
+    left: 67px;
+}
+#cr,#cr1{
+    height: 12px;
+    width:  2px;
+    display: inline-block;
+    margin: 30px;
+    padding-right: 30px;
+    background-color: white;
+    position: relative;
+    top: -8px;
+    left: -25px; 
+    border-radius: 5px 2px 50px 50px;
+}
+#cr1{
+    top: -80px;
+    left: 222px
+}

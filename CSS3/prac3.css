@@ -4,6 +4,8 @@ div{
     margin: 0 auto;
     height: 300px;
     width: 600px;
+    font-size: 30px;
+    color: red;
     background-image: url("flower.avif");
-    background-size: auto;
+    background-size: cover;
 }

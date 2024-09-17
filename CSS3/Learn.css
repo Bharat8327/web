@@ -14,7 +14,7 @@ Ranges -> 0 To 1
 =============================================================================
 Opacity -> Sets the opacity for the element
 =========
-Ranges from 0 to 1
+Ranges from 0 to 1  <- complity visible
             ^
           hidden   
 
@@ -37,10 +37,10 @@ CSS Transitions => Transitions enable you to define the transition between two s
  CSS Transform =>   This property lets you rotate , Scale , Skew , or translate ans element 
          1.Rotate :
                     transform: rotate(45deg);
-         2.Scale : 
-                    transform : scale(0.5);
+         2.Scale :                     x    y
+                    transform : scale(0.5,3.4);
                     transform : scale(1.5);           
-        3.Translate: 
+        3.Translate:                         x      y
                      transform : translate(50px , 50px);
                      transform : translatex(10px);
                      transform : translatey(10px);
@@ -53,7 +53,7 @@ Box Shadow
                 
            sytx => 
                         box-shadow:2px 2px    10px       green;
-                                    x   y   boundaries   ccolor 
+                                    x   y   blurradius   color 
 
  
                              
@@ -64,3 +64,27 @@ BackGround image =>
                 background-image:url("lin");
                 background-size: contain | cover | auto
                                   repeat   crop    stretch 
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+Position -> 
+                the position Css property sets how an elements is positioned in a document 
+                the top,right,bottom and left proprties determine the final location of positioned elements.
+
+        1.static
+        2.relative
+        3.absolute 
+        4.fixed
+
+       Static => The top , right , bottom , left , and Z-index proprties have no effect
+       this is the default value  
+
+       Relative => the offset is relative to utself based on the values of top, right bottom , and left.
+
+       Absolute => The element is removed from the normal document flow , and no space is created for the element in the page layout .
+                        it is positioned relative to its closed positioned ancestor, if any; otherwise , it is placed relative to the initial 
+                        containing block
+        Fixed => The element is removed from the normal document flow,and no space is created for the element in the page layout 
+                it is positioned relative to the initial containing block established by the viewport                

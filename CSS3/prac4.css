@@ -1,24 +1,36 @@
+body{
+    background-color: pink;
+
+}
 .card{
-    width: 300px;
+    width: 200px;
     height: 200px;
-    border: 2px solid black;
+    border: 2px solid pink;
     display: inline-block;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px black;
-    transition: 2s;
-}
-
-.desc{
-    padding: 0px 0px 2px;
+    transition: 1s; 
+    padding-bottom: -50px;
 }
 
 img{
     width: 100%;
-    border-radius: 5px 5px 0px 0px ;
+    border-radius: 5px 5px 0 0 ;
+}
+ .desc{
+    padding: 0px 6px 0px 6px;
+    border: 2px  solid burlywood;
+    border-radius: 10px;
 }
 
-.card:hover{
-    box-shadow: 2px 8px 98px pink
 
+.card:hover{
+    box-shadow: 0px 4px 16px goldenrod;
+
+}   
+
+.desc:hover{
+    color: rgb(30, 128, 128);
+    
 }

@@ -1,0 +1,40 @@
+div{
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    text-align: center;
+    border: 3px solid black;
+    margin: 30px ;
+    display: inline-block;
+}
+#static{
+    background-color: royalblue;
+    position: static;
+    top: 100px;
+    left: 100px;
+}
+
+#Relative{
+    background-color: yellow;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    /* top: -21em;
+    left: 17em;  0 offset: */
+}
+#Absoulate{
+
+    background-color: rgb(209, 14, 131);
+    position: absolute;
+
+    top: 100px;
+    left: 100px; 
+}
+#Fixed{
+    background-color: rgba(29, 226, 167, 0.773);
+    position: fixed;
+
+    top: 100px;
+    left: 100px; 
+
+}
