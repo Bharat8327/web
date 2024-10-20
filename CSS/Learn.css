@@ -57,6 +57,7 @@ text-align (direction L R center)
 font-weight (bold lighter)
 text-decoration (underline , cut )
 line-height (gap)
+text-shadow: x= :horizontal y= :vertical  z = blur effect , p= color ;
 letter-spacing (between space letter)
 font-size ()
 
@@ -137,6 +138,9 @@ font-size ()
                             font-family: avant garde, didot , sans-serif;
                             
 ===========================================================================================
+cursor: property 
+cursor: pointer;
+------------------------------------------------------------------------------------------
 selectors =>
                set of group of elements / individual element selectors choose and applies of the css 
                
@@ -247,15 +251,13 @@ Pseudo Class =>
                 :hover
                 :active
                 :checked
-                :nth-of-type -> changes after nth times that is called of the nth-of-type
-
+                :sof-type -> changes after nth times that is called of the nth-of-type
    Pseudo Elements =>
                         A keyword added to a selector that lets you style a specific part of the selected elements(s)
 
                         :: first-letter
                         :: first-line
-                        ::selection
-
+                        :: selection -> when we are select any text then show the color and background color if are u want to customize then you can do
 
 ==========================================================================================================================
 
@@ -320,7 +322,222 @@ inheritance in CSS
 
           Note => 
                     some properties are not inherite like a ex => width , height , border etc.  manullay set of these properties    
+   -----------------------------------------------------------------------------------------------------------------------------------------------
+
+   Har Har Mahadev
+===========================================
+
+Box Model in CSS ->
+    *Height -> By default, it sets the content areaHeight of the element
+    *Width -> By default,it sets the content area width of the element
+    *Border -> Used to set an element's border  // border are set of the outer line  div ki
+    *Padding
+    *Margin
+
+    sytx=> height
+    /* blue area is a content area oranges area are border area */
+            div{
+                height:100px;
+                width:500px;
+            }
+
+Border =>
+            *border-width 
+            *border-style
+            *border-color
+
+    Border Shorthand
+            
+                    div{
+                        border: 2px solid blockquote;
+                                width style color // shortcuts
+                    }
+      Border Sides -> To control an individual side of the box
+                    1.border-left
+                    2.border-right
+                    3.border-top
+                    4.border-bottom
+                    border-top: 2px dashed blue
+                                width style color 
+
+
+
+      Border-radius => Used to round the  corners of an element's outer border edge
+                        div{
+                            border-radius : 15px;
+                        }                        
+                        
+                        div{
+                            border-radius: 50%;
+                        }
+
+      Padding => 
+                1.padding-Left
+                2.padding-right
+                3.padding-top
+                4.padding-bottom
                 
+                
+                div{
+                    padding-left:50px;
+                }
+
+
+
+          Shorthand of the padding =>
+                #1. for all 4 sides
+                    padding: 50px;
+                #2. top & buttom | left & right
+                    padding : 1px 2px
+                #3. top | left & right | bottom
+                    padding: 1px 2px 3px;
+                #4. top | right | bottom | left(clock wise)
+                    padding: 1px 2px 3px 4px               
+
+
+          ==================================================================          
+          Margin => To set spacing on the outside of border 
+
+          1.margin-left
+          2.margin-right
+          3.margin-top
+          4.margin-bottom
+
+          sytx=>
+                    div{
+                        margin-left:50px; 
+                    } 
+
+                    shortest hand of Margin=>
+                    #1. for all 4 sides
+                    Margin: 50px;
+                    #2. top & buttom | left & right
+                    Margin : 1px 2px
+                    #3. top | left & right | bottom
+                    Margin: 1px 2px 3px;
+                    #4. top | right | bottom | left(clock wise)
+                    Margin: 1px 2px 3px 4px
+                    
+
+===============================================================================
+Em=>
+                    unit -> em
+
+                    relative to => font size of the parent, in the case of typographical properties like font-size, and 
+                                    font size of the element itself.in the case of other proprties like width.
+
+
+
+     Drawback of Em => Snowball  effect in nestd elements
+
+Rem(Root Em)=> unit -> rem 
+                relative to => Font size of the root element 
+
+
+                Alpha Channel => Sets the opacity for a color 
+                ============= 
+                
+                Ranges -> 0 To 1 
+                        0 menans => No Visible 
+                        1 means  =>  Visible
+                
+                     sytx =>
+                                background-color: rgba(250,0,0,0.4);
+                                background-color: #ff0000ff; last 2 ff is show of alpha value 
+                
+                
+                
+                =============================================================================
+                Opacity -> Sets the opacity for the element
+                =========
+                Ranges from 0 to 1  <- complity visible
+                            ^
+                          hidden   
+                
+                          sytx=>
+                                        opacity: 1;
+                =======================================================================
+                CSS Transitions => Transitions enable you to define the transition between two states of an element
+                ----------------
+                
+                             syntx=> 
+                            transition:1s; // ms, s
+                             
+                    *Transition ShortHand => Property name | duration | timing-function | delay
+                                transition :  margin-top   |  2s      | ease-in-out     | 0.2s;       
+                
+                                margin: 0 auto; // middle of the 50%
+                
+                
+                 =============================================================================================
+                 CSS Transform =>   This property lets you rotate , Scale , Skew , or translate ans element 
+                         1.Rotate :
+                                    transform: rotate(45deg);
+                         2.Scale :                     x    y
+                                    transform : scale(0.5,3.4);
+                                    transform : scale(1.5);           
+                        3.Translate:                         x      y
+                                     transform : translate(50px , 50px);
+                                     transform : translatex(10px);
+                                     transform : translatey(10px);
+                        4.Skew Property 
+                                        transform: skew(30deg);             
+                
+                ------------------------------------------------------------------------------
+                Box Shadow 
+                           => it addes shadow effects around an element's frame
+                                
+                           sytx => 
+                                        box-shadow:2px 2px    10px       green;
+                                                    x   y   blurradius   color 
+                
+                 
+                                             
+                                                    
+                BackGround image => 
+                                Lets you set an image as a background
+                        sytx =>
+                                background-image:url("lin");
+                                background-size: contain | cover | auto
+                                                  repeat   crop    stretch 
+                
+                
+                
+                --------------------------------------------------------------------------------------------------------------
+                
+                Position -> 
+                                the position Css property sets how an elements is positioned in a document 
+                                the top,right,bottom and left proprties determine the final location of positioned elements.
+                
+                        1.static
+                        2.relative
+                        3.absolute 
+                        4.fixed
+                
+                       Static => The top , right , bottom , left , and Z-index proprties have no effect
+                       this is the default value  
+                
+                       Relative => the offset is relative to utself based on the values of top, right bottom , and left.
+                
+                       Absolute => The element is removed from the normal document flow , and no space is created for the element in the page layout .
+                                        it is positioned relative to its closed positioned ancestor, if any; otherwise , it is placed relative to the initial 
+                                        containing block
+                        Fixed => The element is removed from the normal document flow,and no space is created for the element in the page layout 
+                                it is positioned relative to the initial containing block established by the viewport                
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
  ====================================================================================
  
  color combination for best wesite follow this website can suite make interactive
