@@ -234,3 +234,186 @@ Arrays Methode =>
 
      .sort() -> sort an array in Ascending order       
         this sort function only use for string and char type of value in integer we are not use this function
+
+
+
+
+        
+
+        Array References =>(address and memory )
+    let arr = [1,2,3,4];
+    arr = > called of the reference variable 
+    example => let a = [1,2,3,5];
+                let b = [1,2,3,5];
+              
+                if(a==b||a===b)return false;
+                bcz we are compare both address where is also different then return false 
+        let c = a;
+        if(c==a||c===a)return true; bcz both are point same address then write true 😊
+
+
+    constant arrays => in constant arr not a value constant we are can perform any operation on const array remove and delete 
+            but we are can't change actual new address and new array 
+        cont arr = [3,4,5,2];
+
+
+
+    Nested Array =>(multi dimensonal array)
+        Array of arrays
+                          0     1      2
+            let nums = [[2,4],[3,6],[4,8]];
+                         0 1   0 1   0 1
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ loops =>   used to iterate peace of code                    
+ syntax =>
+        for(initialization ; condition ; updation){
+            //dp smtg console.log(i);
+        }
+while loop=> 
+    while(condition){
+        // do something
+    }
+
+    break -> break the current executaion in the loop
+
+
+    for of loop => (for each loop)
+
+    for(element of collection){
+        //do something
+    }
+
+    let fruits = ["mango","apple","banna","litchi","orange"];
+    for(fruit of fruits){
+        console.localStorage(fruit);
+    }
+    nested for of loop
+
+    for(fruit of fruits){
+        for(frt of fruit){
+            console.localStorage(frt);
+        }
+    }
+
+
+------------------------------------------------------------------------------------------------------------
+JS Object Literals => Used to store Keyd collection & complex entities(data)
+
+        property => (keyword,value) pair 
+        Objects are a collection of properties
+
+        key literals object define syntax 
+
+        let/const variable_name = {
+            key : value,
+            key :value,
+            key:value
+        };
+
+
+        Thread  / Twitter Post
+        Create an object literal for the properties of thread / twitter post which includes - 
+        1.username
+2.content
+3.likes
+4.reposts
+5.tags
+
+const post = {
+    username:"@bharat",
+    content:"Hwllo guys",
+    like:150,
+    reposts:5,
+    tags:["@rampatel","@jinu"]
+};
+
+acces literal throw two ways 
+1.object_name.keyname;
+2.object_name["key_name"];
+
+Get Values/Access => Js automaticallly converts objcts keys to strings
+Even if we made the number as a key, the number will be converted to string 
+
+#Add / Update Value in literal obj 
+1.change the city key value to delhi
+    obj_Name.key = new_value;
+2.Add a new property ,gender:"Female"
+    obj_name.keyname = value;
+3.Change the marks to "A"
+    obj_name.marks = "A"
+ 4.delte key in the object 
+    delete  obj_name.key_name; // return true;   
+
+------------------------------------------------------------------------------------------------------------
+Object of Objects =>storing information od multiple student
+
+const info = {
+    bharat:={
+        grade:"A",
+        rollNo:45
+    };
+    ram:={
+        grade:"b";
+        rollno:21;
+
+    };
+    sita:={
+        grade :"C";
+        rollno:23;
+
+    };
+};
+
+// acces info.bharat.grade;
+-----------------------------------------------------------------------------------------------------------------------
+
+Array of Objects => storing informationn of multiple student
+
+const arr = [
+
+{
+
+    name:"ram";
+    city:"jaipur"
+},
+{
+    name:"rahul",
+    city:"kota"
+},
+{
+    name:"jinu",
+    city:"oai"
+},
+
+]//access same objects of literals
+-----------------------------------------------------------------------------------------------------------------------
+
+Math Object =?
+
+properties          Methods
+Math.PI             Math.abs(n); => convert in positive
+Math.E = 2.71       Math.pow(a,b) => cal powe of 2^3
+                    Math.floor(n) => round of min number less then or equal <= (nearst smallest integer value)
+                    Math.ceil(n) => larger value round of 
+                    Math.random()  =>  give random value between (0 to 1 range 1 exclusive ) 
+                                ex =>Math.floor(Number(Math.random())*1000000);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+lecture - 19
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

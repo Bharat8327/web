@@ -1,1 +1,0 @@
-let student=["Ram","Mahadev","bharat"];
