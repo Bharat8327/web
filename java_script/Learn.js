@@ -402,6 +402,198 @@ Math.E = 2.71       Math.pow(a,b) => cal powe of 2^3
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 lecture - 19
+Function => function is a block of code where we use to perform a similar task multiple time in a code then we are use to reduce line of code 
+            and improve readablility of code then we are use of the function 
+
+
+    declaraction => 1. defination 
+                    function Function_name() {
+                        // statement n
+                    }
+
+                   function printName() {
+                    console.log("Hello Name");
+                   } 
+
+                   2. Execute 
+                        function_name();
+                        printName();//output -> Hello Name
+
+
+functionn with Arguments => Values we pass to the function 
+                   syntax =>
+                         function function_name(arfument1,argument2){
+                            // use with differnt ways
+                         }
+                         function_name(p1,p2); // acess call function_name();
+
+Return kEyword is Function =>   return keyword is used to return some value from the function   
+
+                             input -> Function  -> output
+                                    (does some word)
+
+                        function function_name(p1,arg1){
+                            // statement
+                            return val;
+                        }            
+
+Scope => Scope determines the accessiblility pf variables ,object ,and functions from different parts pf the code
+
+                        1.function scope -> vaiable defined inside a function are not accessible (visible from outside the function)
+                        2.Block
+                        3.Lexical -> a variable defined outside a function can be accessible inside another function defined after the varable declaration 
+                                    the opposite is NOT True
+
+
+ function Expression = > 
+                        
+                        const variable = function(arg1,p1....){
+                            // do or return simething
+                        }
+                        // nameless function
+                    let hello = function(p1,p2){// access throw variable name hello(p1,p2);
+                        console.log("hello");
+                    }
+                    
+ Higher Order Functions => A function that does one or both 
+              1. takes one or multiple function as argument 
+                        
+                        function multiple(func,times){
+                            for(let i=1;i<=times;i++){
+                                func();
+                            }
+                        }
+                        let greet = function(){
+                            console.log("Namaste Bharat");
+                        }
+                        function calling =>  multiple(greet,100);
+
+               2. returns a function take multiple argument / single argument 
+                    function evenOrOdd(takfun){
+
+                        if(takfun=="odd"){
+                            let odd = function(n){
+                                console.log(!(n%2==0));
+                            }
+                            return odd;
+                        }
+                        else if(takfun=="even"){
+                        let even = function(n){
+                            console.log((n%2==0));
+                        }
+                        return even;
+                    }else{
+                        console.log("wrong takfun throw user");
+                    }
+                    }  
+
+  // shorthand methods
+  const calculator = {
+    add : function(a,b){
+        return a+b;
+    },
+    sub : function(a,b){
+        return a-b;
+    }, 
+    mul : function(a,b){
+        return a*b;
+    }
+};
+// access calculator.add(2,4); // 6
+
+shorthand property of this calculator define function in object 
+
+methods shorthand =>
+    const calculator = {
+        add(a,b){
+            return a+b;
+        },
+        sub(a,b){
+            return a-b;
+        }, 
+        mul(a,b){
+            return a*b;
+        }
+    }
+=====================================================================================================================================================
+
+this.keyword  => This keyword refers to an object that is executing the current piece of Code.
+
+=====================================================================================================================================================
+
+try & catch => 
+    the try statement allows you to define a block of code to be tested for errors while it is being executed.
+the catch statement allows you to define a block of code to be executed, if an error occurs in the try block
+
+Aplcation program interface => API
+
+try{ // bascically check error occur or not if occur then throw error to catch function and catch and perform some task according to req
+    console.log(a);
+}catch(e){
+    console.log("caught an error..!");
+    console.log(e);
+}
+
+=====================================================================================================================================================
+Miscellaneous Topics =>
+    1.Arrow Functions ( => nameless function) (use-> higher order function as a parameter pass and where pass a function name as call a callback value => ek asa function jo dusra function ko as a paramete leta hain use callback value kehte hain  )
+        syntx =>  
+                    const func = (arg1,arg2) => {function defination /*return  */}
+
+    2. Arrow Function implicit return
+        syntax =>
+                    const sum = (a,b=0) =>(a+b);  
+
+
+    3. Set Timout  -> inbuilt function window object ka function hota ha(use for api call and send request and recevice ke liye)  
+    
+                    syntx => 
+                            setTimeout(function,timeout) 
+                                                    take milisecond time as a parameter 1s => 1000ms
+
+    4. Set Interval ->
+                    same as the settime out only for measure differnece b/w set time out only for execute one time but this is execute multiple time and stop and again execute                                                 
+            syntax =>
+                    setInterval(function , timeout)
+
+                console.log("hello bharat");
+
+                let id = setInterval(()=> { // infinite running 
+                    console.log("are u ready ");
+                },2000);
+
+                stop this interval then use this 
+                clearInterval(id); // break the interval
+=====================================================================================================================================================
+     
+# this with Arrow Function =>
+    Arrow-this =>  scope of this function lexical scope who is call of the parent function inherit the arrow function parents scope -> window
+
+
+     
+     function-this =>   scope of the calling object who is call this function 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
