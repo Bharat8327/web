@@ -515,6 +515,19 @@ methods shorthand =>
             return a*b;
         }
     }
+
+Default Parameters =>
+                        Giving a default value to the argument
+
+syntax =>
+            function function_name(a,b=10){
+                return a+b;
+            }
+
+            function_name(1);//output 11
+            function_name(1,12);//output 13
+
+
 =====================================================================================================================================================
 
 this.keyword  => This keyword refers to an object that is executing the current piece of Code.
@@ -573,39 +586,129 @@ Miscellaneous Topics =>
      
      function-this =>   scope of the calling object who is call this function 
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+map => 
+    let newArr = arr.Map(some function defination or name); return a new array
+
+    ex =>   
+            let num = [1,2,3,4];
+            let double = num.Map((el)=>{return el*2});
+            // 
+            let double = num.Map(function(el){
+                return el*2;
+            });
+    ex=>
+            let studentInfo = [{
+                name:"bharat",
+                marks:100
+            },{
+                name:"ram",
+                marks:100.5
+            },{
+                name:"love",
+                marks:99
+            }];
+            let gpa = studentInfo.map((el)=>{//return new array store in gpa
+                return el.marks/10;
+            });
+                         
+ Filter=>
+        let newArr = arr.filter(some function defination or name);// return true of false value
+        
+    ex =>   
+            let nums = [2,4,1,5,6,2,7,8,9];
+            let even = nums.filter( (num)=>(num%2==0)); // return new array if return false then donot add otherwise add
+
+
+Every => (same as a logical and operator)
+        Returns true if every element of array gives true for some condtion function.Else return false.
+        syntax=>
+                Array.every(some function definationn or name);
+
+    ex=>    
+            [1,2,3,4].every( (el) => (el%2==0));//false;
+            [2,4].every((el)=>(el%2==0));//true;        
+
+
+some => (same as a logical OR operator)
+        Returns true if every element of array gives true for some condtion function.Else return false.
+syntax=>
+        Array.some(some function definationn or name);
+
+ex=>    
+    [1,2,3,4].some( (el) => (el%2==0));//truw;
+    [2,4].some((el)=>(el%2!=0));//true;        
+
+
+Reduce => 
+            Reduce the array to a single value
+
+    syntax =>   Array.reduce(reducer function with 2 variable for (accumulator,element) );
+
+    ex=>    [1,2,3,4].reduce ( (res, el) => (res+el) );//output - 10
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Spread =>
+        Expands an iterable into multiple values 
+
+syntax =>
+        function function(...arr){
+            // do something
+        }
+ex => arr = [1,2,3,4,5]; 
+
+        console.log(...arr);// op =>  1 2 3 4 5
+
+       s = "ramsita";
+       console.localStorage(...s);// op => r a m s i t a  
 
 
 
+object literals spread =>
+
+        syntx =>
+            const obj1 = {
+                name:"bharat",
+                age:20,
+                email:"bp12@gmail.comm"
+            };
+            
+            const datacopy = {...obj1,id:12};
 
 
 
+Rest => Allows a function to take an indefinite number of argument and bundle them in an array (opposite to the spread ans store in iterable )
 
+syntax=>     function sum(...args){
+                return args.reduce((add,el) => add+el );
+            }
+       ex=>     
+            function sum(msg,...args){
+                console.log(msg);
+                return args.reduce((add,el) => add+el );
+            }
 
+            function sum(msg,...args){
+                console.log(msg);
+                return args.reduce((add,el) => add+el );
+            }
+            // access sum("bharat",1,2,323,23); //bharat 349
+            // access sum(1,2,323,23); // 1 348  => 1st argument take as a msg in this function
+            
+             
 
+ Destructuring => 
+                    Storing values of array into multiple variables 
+    
+        let name = ["tnoy","moni","love","jesu","kitu","miw","mwe"];
+        // let winner = name[0];
+        // let runnerup = name[1];
+        // let secondrunnerup = name[2];
+        // this upeerall COmbine in one line
+        let [winner,runnerup,secondrunnerup] = name;
+               0       1           2
+        let [winner,runnerup,...others] = name; // called a distructruing and mixup with rest
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Destructing for Objects =>
+    
