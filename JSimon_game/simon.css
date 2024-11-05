@@ -1,0 +1,73 @@
+body {
+    background-color: palegoldenrod;
+    text-align: center;
+}
+
+.conatiner {
+    display: flex;
+    justify-content: center;
+}
+header{
+ text-align: center;
+}
+
+
+.b1,.b2,.b3,.b4 {
+    border: 2px dotted black;
+    border-radius: 20px;
+    width: 200px;
+    /* margin: 10px; */
+    height: 200px;
+}
+
+.b1 {
+    background-color: tomato;
+}
+
+.b2 {
+    background-color: aqua;
+}
+
+.b3 {
+    background-color: orange;
+}
+
+.b4 {
+    background-color: violet;
+}
+
+.btn{
+    margin: 10px;
+}
+
+@media (max-width:320px) {
+    .f1{
+        margin-left: 120px;
+    }
+    .f{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:430px){
+    .conatiner{
+        margin: 100px auto;
+    }
+    .f1{
+        margin-left: 50px;
+    }
+}
+
+
+
+
+/* changes color when user_press btn according javascript  */
+
+.flash {
+    background-color:darkblue;
+}
+
+.userFlash1 {
+    background-color: rgba(63, 255, 156, 0.211);
+}
