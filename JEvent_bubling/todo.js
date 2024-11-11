@@ -6,7 +6,7 @@ btn.addEventListener('click',function(){
     let li = document.createElement('li');
     li.innerText = inp.value;
     
-    let remBtn = document.createElement('button');
+    let remBtn = document.createElent('button');
     remBtn.innerText = 'Remove';
     remBtn.classList.add('remTask');
     
