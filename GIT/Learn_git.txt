@@ -1,0 +1,108 @@
+what is git => Free & open Source Version Control System (tools that help to track changes in code )
+What is github => website where we host repositories online 
+README.md => markdown 
+
+using git =>
+command line (most popular)
+IDE / code editors(like VSCODE)
+Graphica User InterFace (like GItKraken)
+
+
+Configuring Git (which name and email throw commit and store myself information on github)
+git config --global user.name "my name"
+git config --global user.email "email@gmail.com"
+git config --list 
+
+
+Basic Commands =>
+clone -> Cloning a repository on our local machine (cmd)-> git clone <https-link>
+status -> displays the state of the code (cmd )-> git status     
+
+add -> adds new or changed files in your working directory to the git staging area. (cmd ) -> git add <file-name> 
+commit -> it is the record of change  (cmd) -> git commit -m"meaning-ful message "
+push -> upload local repo content to remote repo (cmd) -> git push origin main (origin ->where git hub repo present / main->branch  )
+
+
+init -> used to create a new git repo  (cmd) -> git init 
+git remote add origin <--ssh-link--->
+git remite -v (to verify remote)
+git branch (to check current branch )
+git branch -M main (to rename branch)
+git push -u origin main(set origin u -> upstream on cloud set create by degault) after this use -> git push (only)
+git push origin main 
+
+if are u want to add and commit at a time then 
+git commit -am "message" (a->add , m->message)
+
+
+Git branch 
+git branch (to check branch )
+git branch -M main (to rename branch )
+git checkout <-branch-name-> (to navigate one branch to another branch) 
+git checkout -b <-new branch name -> (to create new branch)
+
+git branch -d <-branch name-> (to delte branch)
+
+set the origin of the new branch then use 
+git push --set-upstream origin branch_name
+
+
+
+Mergin Code 
+
+git diff <-branch_name-> (to compare commits,branches , files&MORE)
+git merge <-branch_name-> (to merge 2 branches)
+OR
+ Pull Request ->it lets you tell others about changes you've pushed to a branch in a repository on github(pull request also be a commit)
+ create a Pull_request(PR)
+
+#used to fetch and download content from a remote repo and immediately update the local repo to match that content
+ pull request only changes on remote system but we need to update on local system the use this 
+(cmd)->git pull origin main 
+
+
+Merge Conflicts =>  An event that takes place when git is unable to automatically resolve differece in code between two commits  
+git merge branch_name
+
+
+Fixing Mistakes ->
+Case 1: staged changes 
+    git reset <-file-name->(only for one)
+    git reset (for all)
+Case 2: commited changes (for one commit)    
+    git reset HEAD~1
+Case 3: Commited changes (for many commits)    
+    git log(commit_info)
+     git reset <-commit_hash->
+     git reset --hard <-commit_hash-> 
+
+
+    
+  what is forking =>   a fork is a new repository that shares code and visibility settings with the origianl "upstream"
+  repository 
+  Fork is a rough copy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
