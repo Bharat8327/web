@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crousal</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .canvas{
+            height: 100vh;
+            background-color: rgb(232, 186, 22);
+            display: flex;
+            border:10px solid rgb(30, 93, 166);
+            justify-content: center;
+            align-items: center;
+        }
+        .conatiner{
+            width: 80vw;
+            aspect-ratio: 16/8;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden; 
+        }
+        .btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            background-color: #fff9;
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }  
+        
+        .lbtn{
+            left: 10px;
+        }
+        .rbtn{
+            right: 10px;
+        }
+        .flex-container{
+            display: flex;
+            height: 100%;
+            background-color: pink;
+            transition: 1s ease;
+        }
+
+        .img-style{
+            aspect-ratio: 16/8;
+            object-fit: cover;
+        }
+        .carosuel-nav{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .carosuel-dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        .carosuel-dot.active{
+            background-color: white;
+            transition: 2s;
+        }
+
+       
+    </style>
+</head>
+<body>
+<div id="bc" class="canvas">
+    <div id="conatiner" class="conatiner">
+       <div id="flex-container" class="flex-container"></div>
+       <button class="btn lbtn" id="lbtn"><</button>
+       <button class="btn rbtn" id="rbtn">></button>
+       <div class="carosuel-nav" id="carosuel-nav"></div>
+    </div>
+</div>
+
+    <script src="crousal.js"></script>
+</body>
+</html>

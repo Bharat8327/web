@@ -5,8 +5,8 @@ there are 7 types of the primative data types
 3.Boolean
 4.Undefined
 5.Null
-6.Bigint
-7.Symbol
+6.Bigint -< list 
+7.Symbol -< list  (In JavaScript, a Symbol is a primitive data type introduced in ECMAScript 6 (ES6). It represents a unique and immutable value that can be used as a key for object properties.)
 ----------------------------------------------------------------------------------------------------------
 Operator Precendence => this is the genral order of solving an expression (left to right)
 1.()
@@ -15,7 +15,13 @@ Operator Precendence => this is the genral order of solving an expression (left 
 4.+,-
 
 -------------------------------------------------------------------------------------------------------------------
+non-primative datatype => 
+            array and object 
+-------------------------------------------------------------------------------------------------------------------
+// TODO javaa script is a paradigam language 
+//TODO -  -  prototype inheritance  concept 
 
+//TODO - what is differnce b/w html-collection and node list 
 Let Keyword =>Syntax of declaring variables (2015 introduce let keyword)
 
 let vaiable_name = value;
@@ -30,6 +36,12 @@ var var_name= val;
 ------------------------------------------------------------------------------------------------------------------
 
 // comment in java script 
+// learn type coersion 
+convert string to number 
++'4'; // output  => 4
+
+type conversion by using some inbuilt function i can change the datatpe of the variable 
+
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -65,6 +77,7 @@ String Indices =>
                 B   h   a   r   a   t   sp      P   a   t    e   l 
   index =>      0   1   2   3   4   5    6      7   8   9    10  11  (0 Based indexing )
 
+  find=> find methode return the current item which matches the condition first
         name[0]->point to the 'B';
         find the lemgth of the string then use => string_name.length;
 
@@ -78,7 +91,8 @@ null % undefined in JS
 
 Undefined -> A vaiable that has not been assigned a value is of type undefined 
 
-null -> The null value represents the intentional absence of any object value 
+null -> It represents a non-existent or a invalid value  // Returns "object" (kind of a bug in JavaScript)
+The null value represents the intentional absence of any object value 
     To be Explicity assigned -> let a = null;
 
 ===============================================================================================
@@ -94,7 +108,8 @@ null -> The null value represents the intentional absence of any object value
             1.Arithmatic (+,-)
             2.Unary (++,--)
             3.Assignment (=,+=)
-            4.Comparison(>,<,!,===,==)
+            4.Comparison(>,<,!,===,==) == losse
+                                        === strict check data type 
             5.Logical (&& , || , !)
 
 
@@ -109,7 +124,7 @@ truth & falsy ->
                 This doesn't mean their value itself is false or true, but they are treated as false or true if taken in boolean context .
 
                 Falsy value => 
-                            false ,0,-0,on (BigInt value),""(empty string),null,undefined , NaN
+                            false ,0,-0, on (BigInt value),""(empty string),null,undefined , NaN
                 Truthy values =>
                             Everthing else
 
@@ -123,6 +138,8 @@ truth & falsy ->
 
        Prompt Displays a dialog bpx that asks user for some input 
        syntx => prompt("Enter your roll No");
+
+       confirm -> ask a question to user then we are confirm then return this value true and false and then  perform some task 
 
 ===============================================================================================================
 
@@ -172,6 +189,8 @@ String Methods =>
         console.log(str.indexof("ram"));
         output -> 0 
 
+        // split use to convet string to array 
+        stringNmae.split('');
    
        
 ## Methode Chaining  => using one methode after another . Order of Execition will be left to right .
@@ -184,8 +203,33 @@ String Methods =>
         str.slice(start,end); end exclusive // Love
         str.slice(-num) = str.slice(length-num);
 
+        practise => first letter of the string convet into the capital letter 
+        like input => ' my name is a bharat ' // Output should be " My Name Is A Bharat"
+        code => 
+                let res = str.split(' ').map((el)=>{
+                    return el[0].toUpperCase()+el.slice(1);
+                }
+                                            )
+                .join(" ");
 
-## .replace('target','pointout' ) ->      searches a value in the string & return a new string with the valu replace 
+        practise ->2 this question are asked find a maxlength of the string print throw the reduce methode output sholud be maxLength of string a result  
+        let str = "my name is bharat"
+        let newStr = str.split(' ').reduce((acc,el)=>{
+            return acc.length>el.length?acc:el;
+        });
+
+        //NOTE -  endsWith and startsWith 
+        console.localStorage(URL.endsWith('.com')) // return true or falsy value 
+        console.localStorage(URL.startsWith('.com')) // return true or falsy value 
+
+        // padStart and padEnd  use in atm card online ************3553
+        const spinner  = "loading ";
+        spinner,padEnd(length,'.'); // loading...
+        spinner,padStart(length,'.'); // ...loading
+
+
+
+## .replace('target','pointout' ) ->      searches a value in the string & return a new string with the valu replace // replcae(only first element changes but ) and replaceAll 
 
     format => let str = "Ilovecoding";
     str.replace("love","ram");
@@ -196,6 +240,14 @@ String Methods =>
         let  str1 = "mango";
     str.repeat(3); // "mangomangomango";
     
+## // search 
+const para = ['vaurn abraur bruaarug dvndfiv virjbi ebeijbn v'] ;
+console.localStorage(parseFloat.search('Name'))// return a index where is start with    
+
+## match 
+const passwd = 'ram@gmail.com'
+passwd.match(/ [0-9/]); // use for validation is num containe or not 
+
     
 
 =======================================================================================================================================================
@@ -221,6 +273,8 @@ Arrays Methode =>
     .concat(arrayName) -> merge 2 arrays  // first element start with first arrname the argument array name 
    
     .reverse() -> reverse an array // complete array are reverse and mmodified this array with revrse 
+    // toSplice , toReverse ,
+    .toReverse() => this methode return a reversed array but one canditon original array can't me modified then we are used when not modified in original array 
 
     .slice() -> copies a portion of an array 
     arr.slice(5); 
@@ -235,6 +289,17 @@ Arrays Methode =>
      .sort() -> sort an array in Ascending order       
         this sort function only use for string and char type of value in integer we are not use this function
 
+        //integer array sort in ascending order 
+    array_name.sort((firstval,secondval)=>{
+        return firstval-secondval; 
+        // {fval > sval return 1;
+        //  fval <sval retun -1;
+        //  otherwise return 0}
+    })
+
+    console.log(array_name);
+
+    Array.from(which_element_you_want_to_convert_into_the_array) // then  use of the Array.from() function 
 
 
 
@@ -296,7 +361,36 @@ while loop=>
         }
     }
 
+    // for each loop this loops traverse each element 
+        example => let a = [1,2,4,2,'ram','shyam']
+        a.forEach(element => {
+            console.log(element)
+        });
 
+        or 
+        const prinArray = (ele)=>{
+            console.log(ele);
+        }
+
+          a.forEach(prinArray);  
+
+
+        // for in loop 
+        A for...in loop is used to iterate over the properties of an object in JavaScript. It's commonly used to iterate over an object's keys  
+
+        example =>
+            let obj = {
+                name:"ram1",
+                age:34
+            };
+            for(let i in obj){
+                console.log(`${i} : ${obj[i]} data`);
+            }
+            // output comes this 
+            name : ram1 data
+            age : 34 data
+
+          
 ------------------------------------------------------------------------------------------------------------
 JS Object Literals => Used to store Keyd collection & complex entities(data)
 
@@ -330,7 +424,7 @@ const post = {
 
 acces literal throw two ways 
 1.object_name.keyname;
-2.object_name["key_name"];
+2.object_name["key_name"]; // pass dynamically then use throw bracket 
 
 Get Values/Access => Js automaticallly converts objcts keys to strings
 Even if we made the number as a key, the number will be converted to string 
@@ -367,6 +461,32 @@ const info = {
 
 // acces info.bharat.grade;
 -----------------------------------------------------------------------------------------------------------------------
+function of obejct in js =>
+                    object.keys(object_name) // this give object of keys    
+                    object.values(object_name) // this is gives the value of the key in object 
+
+                    // object entries return a new array
+                    [[typeof,'smartwatch'],['compayname','samsung']]
+                    const Object.entries(object_name);
+
+                    //object.assign 
+                    ex => const obj1 = {
+                        name:'bharat',
+                        class:'csa',
+                        roll:34
+                    };
+                    ex => const obj2 = {
+                        name:'bharat3',
+                        class:'csa4',
+                        roll:34
+                    };
+
+                    use to merge the object in new object 
+                    const objNew  = Object.AudioProcessingEvent(obj1,obj2)
+                    const objNew  = Object.AudioProcessingEvent({},obj1,obj2) // merge two object in a new object 
+
+-----------------------------------------------------------------------------------------------------------------------
+
 
 Array of Objects => storing informationn of multiple student
 
@@ -394,10 +514,28 @@ Math Object =?
 properties          Methods
 Math.PI             Math.abs(n); => convert in positive
 Math.E = 2.71       Math.pow(a,b) => cal powe of 2^3
+                    Math.trunc(5.6) => it is used to remove the decimal value  
                     Math.floor(n) => round of min number less then or equal <= (nearst smallest integer value)
                     Math.ceil(n) => larger value round of 
                     Math.random()  =>  give random value between (0 to 1 range 1 exclusive ) 
                                 ex =>Math.floor(Number(Math.random())*1000000);
+
+                                // NOTE learn about different b/w trunc and floor 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Date => Date Objet 
+const date =  new Date();
+Date.getDay(); // return the day 0-6 (week )
+Date.getMonth() // return a moth  but add 1 then actual mothe comes 
+Date.getDate();
+
+// epoc time 1 jan 1970 start with 
+const currentDate = Date.now();
+newDate = new Date(currentDate);
+new  Date('12-feb-2023') // according to these date we are calculate a birthday date
+
+
+
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -433,6 +571,7 @@ Return kEyword is Function =>   return keyword is used to return some value from
                                     (does some word)
 
                         function function_name(p1,arg1){
+                            
                             // statement
                             return val;
                         }            
@@ -447,7 +586,7 @@ Scope => Scope determines the accessiblility pf variables ,object ,and functions
 
  function Expression = > 
                         
-                        const variable = function(arg1,p1....){
+                        const variable = function(arg1,p1....){  //this function is called a anonyms function 
                             // do or return simething
                         }
                         // nameless function
@@ -561,8 +700,13 @@ Miscellaneous Topics =>
     3. Set Timout  -> inbuilt function window object ka function hota ha(use for api call and send request and recevice ke liye)  
     
                     syntx => 
-                            setTimeout(function,timeout) 
+                            setTimeout(function,timeout) ;
+               -------------------or-----------
+                    setTimeout(function,timeout,Argument_inFUnction) ;
                                                     take milisecond time as a parameter 1s => 1000ms
+
+                        let id = setTimeout(function,timeout) 
+                          clearTimeout(id);                          
 
     4. Set Interval ->
                     same as the settime out only for measure differnece b/w set time out only for execute one time but this is execute multiple time and stop and again execute                                                 
@@ -594,7 +738,7 @@ map =>
     ex =>   
             let num = [1,2,3,4];
             let double = num.Map((el)=>{return el*2});
-            // 
+            //
             let double = num.Map(function(el){
                 return el*2;
             });
@@ -615,6 +759,7 @@ map =>
                          
  Filter=>
         let newArr = arr.filter(some function defination or name);// return true of false value
+        =>  creates a new array with reduced number on-  the conditions applied. 
         
     ex =>   
             let nums = [2,4,1,5,6,2,7,8,9];
@@ -646,10 +791,15 @@ Reduce =>
 
     syntax =>   Array.reduce(reducer function with 2 variable for (accumulator,element) );
 
+            example=> Array.reduce((acc,el)=>{
+                return acc+else;
+            },index)
+
+
     ex=>    [1,2,3,4].reduce ( (res, el) => (res+el) );//output - 10
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-Spread =>
+Spread => 
         Expands an iterable into multiple values 
 
 syntax =>
@@ -676,9 +826,21 @@ object literals spread =>
             
             const datacopy = {...obj1,id:12};
 
+            // NOTE object sprad are important in ract libary 
+
+            update with a new value 
+
+            const newObj = {...obj1,age:34}
+            age value is reflected now  age is 34 
 
 
 Rest => Allows a function to take an indefinite number of argument and bundle them in an array (opposite to the spread ans store in iterable )
+            example =>   packs the item in array => we are called a  Rest prams 
+                        cionst [frd1,frd2,frd3,frd4,..i.items]  
+        
+
+
+
 
 syntax=>     function sum(...args){
                 return args.reduce((add,el) => add+el );
@@ -699,7 +861,7 @@ syntax=>     function sum(...args){
              
 
  Destructuring => 
-                    Storing values of array into multiple variables 
+                    Storing values of array into multiple variables  happeing basis of the index position 
     
         let name = ["tnoy","moni","love","jesu","kitu","miw","mwe"];
         // let winner = name[0];
@@ -712,18 +874,40 @@ syntax=>     function sum(...args){
 
 Destructing for Objects =>
     
+        const object = {
+            NAME :"bharat",
+            rollNo :45
+        };
 
+        const {Name ,rollNo : roll} = object;
+        console.log(Name, roll);//  Bharat 45
+
+
+//NOTE class in js (in javascript type of class is a function like factory methode) any function like a factory function
+Create class is using class name and class name 
+        class student{
+            constructor(/*you can pass parameter*/){
+                this.name = "amit";
+                this.age =24
+                this.gender = "male"
+            
+            }
+            }
+            const obj1 = new student(/*you can pass parameter*/);
+          console.log(obj1);//student {name: 'amit', age: 24, gender: 'male'}
+            console.log(obj1.gender);// 'male'
+        
 
 
 
 
 
 -----------------------------------------************************************--------------------------------------------------------------------------------------------------
-                                                    DOM(ADVANCE JAVASCRIPT)
+                                                    DOM(ADVANCE JAVASCRIPT)Documnet Object Model
                                                 ===============================
 
 DOM => Documnet Object Model
-    -> The Dom Represents a document with a logical tree.
+    -> The Dom Represents a document with a logical tree.   
         it allows us to manippulate/change webpage content(html Elements);
 
     
@@ -743,6 +927,9 @@ Selecting Elements =>
                     => document.getElementsByTagName("tag_name"); 
                             return the elements as an html collection or empty collection (if not found)
 
+                            //NOTE -  Differce b/w css class and js className 
+                            manily in js class name keyword use to create a class where we are used create a object-orinted programing then we are use of the className in js 
+
 -********************************************Query Selectors******************************************************************************************************
 
 Allows us to use any CSS Selector 
@@ -750,24 +937,50 @@ Allows us to use any CSS Selector
     document.querySelector('#myid'); // Selectors first  element with id = myId 
     document.querySelector('.myclass'); // Selectors first element with class = myclass
     
-    document.querySelectorAll("p"); //selectors all p elements return with NodeList(size_of_total)
+    document.querySelectorAll("p"); //selectors all p elements return with NodeList(size_of_total) and we are can apply foreach loop 
+
+    //NOTE -  difference b/w nodelist and html colllection 
+
+    Here's a table that outlines the differences between `NodeList` and `HTMLCollection`:
+
+    | **Feature**                | **NodeList**                                                                            | **HTMLCollection**                                                                                                   |
+    |----------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+    | **Definition**             | A collection of nodes in the document (could be any node type).                         | A collection of HTML elements (usually returned by methods like `getElementsByTagName` or `getElementsByClassName`). |
+    | **Type of Elements**       | Can include any node type, such as elements, text nodes, comments, etc.                 | Contains only HTML elements (e.g., `<div>`, `<p>`).                                                                  |
+    | **Live vs Static**         | Can be live or static (depends on how it is obtained).                                  | Live (the collection updates when the document changes).                                                             |
+    | **Access by Index**        | Can be accessed by index, but it can return different node types (not just elements).   | Can be accessed by index, but only contains HTML elements.                                                           |
+    | **Methods**                | Limited methods (e.g., `forEach`, `item()`, or `length`).                               | More extensive methods like `item()`, `namedItem()`, and `length`.                                                   |
+    | **Returned by**            | Methods like `querySelectorAll`, `childNodes`, `getElementsByTagName` (in some cases).  | Methods like `getElementsByTagName`, `getElementsByClassName`, `getElementsByName`.                                  |
+    | **Iteration**              | Cannot directly use `forEach` without conversion (in older browsers).                   | Can directly use `forEach` (in modern browsers, but not in older versions).                                          |                   
+    | **Collection Type**        | Usually a `NodeList` object.                                                            | An `HTMLCollection` object.                                                                                          |
+    | **Support for Dynamic Changes** | Live `NodeList` will update with changes in the DOM.                               | Live `HTMLCollection` will automatically reflect changes in the DOM.                                                 |
+
+    
+
 
 
 
 -********************************************Using Properties & Methods******************************************************************************************************
 
-1.inner Text 
+1.innerText 
 Shows the visible text contained in a Node
 2.text content(show hidden )
-shows all the full text
-3.innerHTML(show anchor tag , bold tag,internal style)
-shows the full markup
+shows all the full text and show hidden text where we display property set is none
+3.innerHTML(show anchor tag , bold tag,internal style,and add html inside of the runtime )
+shows the full markup with show ineerHtml  
+
 
 
 -********************************************Manipulating Attributes******************************************************************************************************
-obj.getAttribute(attr);
+obj.getAttribute(attr); => 
 obj.setAttribute(atr_name,val);
+obj.setAttribute("atr_name,val; atr_name,val" );// at a time set a multiple property in html attribute  throw ; operator 
+    example =>
+             p.setAttribute("style", "padding: 20px; color:green");
+
 obj.getAttribute(attr);
+
+//TODO - what is void element in js => void element basically we called which no one children are exists that is called a void element 
 
 -********************************************Manipulating Style******************************************************************************************************
 style Property only for show iniline style in the js document file 
@@ -795,8 +1008,8 @@ Navigation =>
 
 document.createElement('element_name');
 
-1.appendChild(element); //add new body where we want to add then show in html page on the last 
-2.append(element); // parent ke child ke andar edit krna or additional add krna then use append function 
+1.appendChild(element); //add new body where we want to add then show in html page on the last only append a single element in htmlcollection
+2.append(element1,Element2,...); // parent ke child ke andar edit krna or additional add krna then use append function this is use to append multiple element appnd in the htmlcollection 
 3.prepend(element); // start of the parent 
 4.insertAdjacentElement(where,element); // where do we want to add new element 
         where => 1.berforebegin
@@ -812,7 +1025,8 @@ document.createElement('element_name');
                             body.append(btn);
 
                      eventListener=>
-                               btn.addEventListener("click",function(){
+                               btn.addEventListener("
+                                click",function(){
                                 btn.style.backgroundColor='green'});
 
 
@@ -821,6 +1035,11 @@ document.createElement('element_name');
     2.remove(element); // append         
 
 
+*****************************************************************************************************
+// use script tag before the body 
+<script src = "app.js" ></script> // this write on head and access some element then give null/error bcz this file is first load before the head then cant find and search in the file then we are used defer 
+//  defer means first render body element and then render this script file on the browser 
+syntax => <script src = "app.js" defer></script> //after the html load this file 
 *****************************************************************************************************
 DOM -> Events 
             Events are signals that something has occured.(user inputs /actions)
@@ -846,6 +1065,16 @@ Keyboard Event => when key is pressed then some operation are performed
                                 -> A . code -> enter key ASCII code print / Name 
                                    B . key -> visible on the screen when we enter throw keyboard 
 
+*****************************************************************************************************
+Mouse event =>
+    1."dblclick"
+    2."mouseout"
+    3."mouseout"
+
+input events =>
+    1.focus => use to change border property and input property 
+    2.blur => when u leave input then trigger this methode 
+    3.input => when user some type inside the input element then trigger and print some value in this methode 
 
 *****************************************************************************************************
 form Events  =>
@@ -897,7 +1126,7 @@ example =>
             });
 *****************************************************************************************************
 bubling_proagation => when at a time trigger multiple function then it mange this trigger then we are use event_obj.stopPropagation(); this happen was stop that is called of the bubling_proagation
-
+            syntx => event_obj.stopPropagation();
 
 *****************************************************************************************************
 Call Stack => fifo structure are follow
@@ -1109,4 +1338,29 @@ make arrow function async =>
 
 
            Await Keyword=>  Handling Rejections with await             
-                        
+                     
+
+
+
+       /* netlify and github upload live                    */
+
+//NOTE Filter map 
+const a =[2,4,5,2,3,12,4]
+
+                        function odd(num){
+                            return num%2==0;
+                        }
+let  ans = a.filter(odd); // in filter use to return true and false value then use this filter methode in java
+
+//NOTE -  some function => return true of false 
+
+                        const res = CSSMathProduct.some((item)=>[
+                            return !item.instock;
+                        ])
+
+//NOTE - Map 
+function sq(num){
+    return num*num;
+}
+
+a.Map(sq); // map are use to modify the array and  return a new array 

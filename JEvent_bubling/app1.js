@@ -12,7 +12,7 @@ ul.addEventListener('click',function(event){
 
 for(l of li){
     l.addEventListener('click',function(event){
-        event.stopPropagation();
+        event.stopPropagation();// used to stop the bubling in the html css page if user click then handle all of these bubling 
         console.log('li was clicked');
     });
 }

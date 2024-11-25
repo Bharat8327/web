@@ -17,7 +17,17 @@ API => Application Programming Interface (API-> are bascially a webApi  )
     json validator tell which code is correct or not 
 
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//NOTE JSON VS JS 
+
+JavaScript Object	JSON
+1.	Keys in key/value pairs don’t always need double quotes.   || 	Keys in key/value pairs need to be enclosed in double quotes.
+2.	It is only used by JavaScript.                             ||  	Other programming languages are able to generate and use JSON.
+3.	Functions are compatible with JavaScript Object.	       ||   Functions are incompatible with JSON.
+4.	The built-in JavaScript JSON.stringify()                   || Using the built-in JSON.parse() method, you can transform JSON data into a JavaScript object.
+     method allows you to convert JavaScript objects
+     to JSON format.	
     
+     
     JSON => Accessing Data from JSON (all json data come in string format and send data any api throw server then we are use sttring fromat )
         
         1.JSON.parse(data) method 
